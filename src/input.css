@@ -36,3 +36,6 @@
 .datLeo-subheadline-label {
     @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-[12px] text-center;
 }
+.datLeo-button {
+    @apply text-center uppercase tracking-wider py-4 px-8 text-[13px] font-semibold cursor-pointer rounded-sm hover:bg-opacity-90;
+}
