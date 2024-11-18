@@ -28,7 +28,7 @@
 }
 
 .datLeo-subheadline {
-    @apply flex justify-center items-center mb-24;
+    @apply flex justify-center items-center my-20;
 }
 .datLeo-subheadline-deco-line {
     @apply w-8 h-px bg-gray-200;
@@ -38,4 +38,46 @@
 }
 .datLeo-button {
     @apply text-center uppercase tracking-wider py-4 px-8 text-[13px] font-semibold cursor-pointer rounded-sm hover:bg-opacity-90;
+}
+
+/* CSS cho parallax */
+#root {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+.datLeo-parallax,
+.datLeo-no-parallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.datLeo-parallax {
+    height: 40vh;
+}
+.datLeo-no-parallax {
+    height: auto;
+    z-index: 999;
+    background: white;
+}
+.datLeo-parallax-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+@media screen(xl) {
+    .datLeo-parallax {
+        height: 70vh;
+        transform-style: preserve-3d;
+    }
+    .datLeo-parallax-image {
+        transform: translateZ(-1px) scale(1.5); 
+    }
 }
